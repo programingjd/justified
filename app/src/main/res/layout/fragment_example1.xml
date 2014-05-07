@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="#ffffffff"
+  tools:context="com.uncopt.android.example.justify.ExampleActivity.ExampleFragment">
+  <!-- Small hack for adding padding that doesn't clip the content when scrolling:
+       The text starts with a newline, and we add the text size as negative margin top -->
+  <com.uncopt.android.example.justify.MyJustifiedTextView
+    android:id="@+id/section_label"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:layout_marginTop="-16dp"
+    android:textColor="#ff666666"
+    android:textSize="16dp"
+    android:focusable="true"
+    android:focusableInTouchMode="false"
+    android:text="@string/text1"/>
+</RelativeLayout>

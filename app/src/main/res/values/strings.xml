@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Justified Text Library Demo</string>
+
+  <string name="title_section1">TextView Example</string>
+  <string name="title_section2">EditText Example</string>
+
+  <string name="text1">
+\nThe library used in this demo is available on <a href="">Github</a>.
+It was written by <b>Jerome DAVID</b>, an Android developer from UNCOPT LLC.
+\nUNCOPT LLC is a small company based in Houston, TX and was funded in 2011 by two developers:
+Jerome DAVID and Christophe CASADEBAIG. It specializes in Android development.
+\nThe first app published by UNCOPT was <a href="market://details?id=com.uncopt.android.filebrowser.free">Duo: Holo File Manager w/ Root (DuoFM)</a>.
+It\'s a file manager that focuses on security, but also on performance and ease of use. You can read more about it <a href="http://duofm.bitbucket.org">here</a>.
+Plugins for this file manager are available (for free) and are distributed as separate applications.
+\nThe second app published was a small developer tools called <a href="market://details?id=com.uncopt.android.charcodes">Character Codes</a>.
+It\'s an app that conveniently displays character codes and entity name.
+\n&#xab;&#x2009;DuoFM&#x2009;&#xbb; is available for free (with ads) and as a paid version,
+while &#xab;&#x2009;Character&#xa0;Codes&#x2009;&#xbb; is only available as a paid app.
+Since the release of those two apps, <a href="http://uncopt.com/android">new UNCOPT apps</a> have
+been released completely free with no ads or tracking of any kind.
+Instead, there\'s a <a href="market://details?id=com.uncopt.android.donations">Donation app</a> and
+users can show their appreciation and help out by donating a little bit of money.
+\n</string>
+
+  <string name="text2">This is an example using a JustifiedEditText,
+demonstrating that you can also justify the content of an editable EditText.</string>
+
+  <string name="swipe">Swipe to\nreveal the\nEditText\nexample</string>
+</resources>

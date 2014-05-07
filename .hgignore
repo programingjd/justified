@@ -1,8 +1,8 @@
-.hg/
-.gradle/
+syntax: glob
+.git
+.gradle
 local.properties
-app/build/
+app/build
 lib/build
 .idea/workspace.xml
 .DS_Store
-

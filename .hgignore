@@ -6,3 +6,7 @@ app/build
 lib/build
 .idea/workspace.xml
 .DS_Store
+*.gpg
+*.gpg.lock
+*.seed
+*.bak

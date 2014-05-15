@@ -52,7 +52,7 @@ relying heavily on java reflection.
 The next best thing is probably to add spacing spans to the text. This is what this library is doing.
 
 The text is parsed and measured and spans are added on the whitespace between words to make the
-line stretch the full width as much as possible.
+lines stretch the full width as much as possible.
 Those spans are very similar to ```ScaleXSpan```, but they do not implement ```ParcelableSpan```
 and are not copied by Copy or Cut and Paste operations.
 
@@ -78,6 +78,12 @@ but this default can be changed.
 
 The measuring of the text is not completely accurate (due to floating errors, font hinting, ...)
 and as a result, the justification is not perfect and lines can be a few pixels too short. 
+
+
+Screenshot
+----------
+
+![](screenshot.jpg)
 
 
 Author

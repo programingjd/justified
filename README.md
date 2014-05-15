@@ -1,7 +1,7 @@
 Justified TextView and EditText
 ===============================
 
-Android TextView or EditText with justified text.
+Android TextView or EditText with justified text for API >= 10 (Gingerbread and newer).
 
 Usage
 -----
@@ -45,8 +45,39 @@ The source code for the demo application is in this repository (app folder).
 Implementation Details
 ----------------------
 
-<!--![](website/static/sample.png)-->
-Coming soon
+The best way to implement justification on TextViews would be to extend the Layouts from the
+```android.text.Layout```  package. However those Layout classes cannot be extended easily without
+relying heavily on java reflection.
+
+The next best thing is probably to add spacing spans to the text. This is what this library is doing.
+
+The text is parsed and measured and spans are added on the whitespace between words to make the
+line stretch the full width as much as possible.
+Those spans are very similar to ```ScaleXSpan```, but they do not implement ```ParcelableSpan```
+and are not copied by Copy or Cut and Paste operations.
+
+The re-parsing of the text is triggered by:
+
+  - a change of the text content.
+  - a re-layout with a different width.
+  - a change in the typeface, text size or text scaleX.
+
+
+Some special characters are not stretched (unless there are more than one in row):
+
+  - thin space
+  - hair space
+  - non breaking space
+
+Indentation spaces are also left as-is to preserve the alignment.
+
+The lines that do not have any whitespace or that would require the whitespace to be stretched too
+much are not justified. The limit for how much stretching is allowed is a factor of 10 by default,
+but this default can be changed.
+
+
+The measuring of the text is not completely accurate (due to floating errors, font hinting, ...)
+and as a result, the justification is not perfect and lines can be a few pixels too short. 
 
 
 Author

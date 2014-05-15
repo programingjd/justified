@@ -9,3 +9,6 @@ lib/build
 *.gpg.lock
 *.seed
 *.bak
+*.apk
+sign.bat
+uncopt.ks

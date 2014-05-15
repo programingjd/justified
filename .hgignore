@@ -6,7 +6,10 @@ app/build
 lib/build
 .idea/workspace.xml
 .DS_Store
+*.apk
 *.gpg
 *.gpg.lock
 *.seed
 *.bak
+sign.bat
+uncopt.ks

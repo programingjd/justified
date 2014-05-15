@@ -13,6 +13,11 @@ android {
         versionCode currentVersion
         versionName "${currentVersion}.0"
     }
+    buildTypes {
+        release {
+            debuggable false
+        }
+    }
 
 }
 

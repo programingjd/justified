@@ -26,5 +26,6 @@ android {
 
 dependencies {
     compile 'com.android.support:support-v4:19.1.0'
-    compile project(':lib')
+    compile 'com.uncopt:android.justified:1.0'
+    //compile project(':lib')
 }

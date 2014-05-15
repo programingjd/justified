@@ -68,8 +68,8 @@ publishing {
                 scm.appendNode('developerConnection', 'scm:git@github.com:programingjd/justified.git')
                 scm.appendNode('url', 'scm:git@github.com:programingjd/justified.git')
             }
-            groupId 'com.uncopt.android'
-            artifactId 'justified'
+            groupId 'com.uncopt'
+            artifactId 'android.justified'
             version "${currentVersion}.0"
             pom.packaging 'jar'
             artifact classesJar

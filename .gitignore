@@ -1,8 +1,9 @@
 .hg/
 .gradle/
 local.properties
+build/
 app/build/
-lib/build
+lib/build/
 .idea/workspace.xml
 .DS_Store
 *.gpg

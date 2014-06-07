@@ -5,7 +5,7 @@ def currentVersion = 1
 
 android {
     compileSdkVersion 19
-    buildToolsVersion "19.0.3"
+    buildToolsVersion "19.1.0"
 
     defaultConfig {
         minSdkVersion 9
@@ -27,7 +27,7 @@ task javadoc(type: Javadoc) {
 
 task sourcesJar(type: Jar) {
     classifier = 'sources'
-    from android.sourceSets.main.allSource
+    from android.sourceSets.main.java.srcDirs
 }
 
 task javadocJar(type: Jar, dependsOn: javadoc) {
@@ -36,7 +36,7 @@ task javadocJar(type: Jar, dependsOn: javadoc) {
 }
 
 task classesJar(type: Jar) {
-    from "$buildDir/classes/release"
+    from "$buildDir/intermediates/classes/release"
 }
 
 artifacts {

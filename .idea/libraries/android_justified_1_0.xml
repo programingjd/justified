@@ -4,6 +4,8 @@
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.uncopt/android.justified/1.0/d90b10f956c74ade92433bc662b7bd920bb10b72/android.justified-1.0.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.uncopt/android.justified/1.0/f57c1df26cc22aa7f7bd836aefc94ad58f914011/android.justified-1.0-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

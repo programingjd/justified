@@ -45,8 +45,11 @@ class Justify {
                               final @NotNull int[] textViewSpanStarts,
                               final @NotNull int[] textViewSpanEnds,
                               final @NotNull ScaleSpan[] textViewSpans) {
+    final long t0 = System.currentTimeMillis();
     final TextView textView = justified.getTextView();
     final CharSequence text = textView.getText();
+
+    final float zero = textView.isInEditMode() ? 0.0001f : 0f;
 
     // The text should be a spannable already because we set a movement method.
     if (!(text instanceof Spannable)) return;
@@ -113,7 +116,7 @@ class Justify {
         // Make sure trailing whitespace doesn't use any space by setting its scaleX to 0
         if (visibleLineEnd < lineEnd) {
           spannable.setSpan(
-            new ScaleXSpan(0f),
+            new ScaleXSpan(zero),
             visibleLineEnd,
             lineEnd,
             Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
@@ -192,6 +195,7 @@ class Justify {
           remaining -= (excess + loop * loop);
           // Set the spans with the new proportions.
           final float reducedProportions = (spaceWidth + remaining) / spaceWidth;
+          final long t2 = System.currentTimeMillis();
           for (int span=0; span<n; ++span) {
             textViewSpans[span] = new ScaleSpan(reducedProportions);
             spannable.setSpan(
@@ -200,6 +204,8 @@ class Justify {
               lineStart + textViewSpanEnds[span],
               Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
           }
+          final long t3 = System.currentTimeMillis();
+          android.util.Log.i("JUSTIFY", "setSpans: " + (t3-t2) + "ms");
           // recompute the excess space.
           excess = (int)Math.ceil(Layout.getDesiredWidth(spannable,
                                                          lineStart, lineEnd,
@@ -207,7 +213,8 @@ class Justify {
         }
       }
     }
-
+    final long t1 = System.currentTimeMillis();
+    android.util.Log.i("JUSTIFY", "justify: " + (t1-t0) + "ms");
   }
 
   static interface Justified {

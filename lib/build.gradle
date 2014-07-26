@@ -1,17 +1,17 @@
-apply plugin: 'android-library'
+apply plugin: 'com.android.library'
 apply plugin: 'maven-publish'
 
-def currentVersion = 1
+def currentVersion = 3
 
 android {
     compileSdkVersion 19
-    buildToolsVersion "19.1.0"
+    buildToolsVersion "20.0.0"
 
     defaultConfig {
         minSdkVersion 9
         targetSdkVersion 19
         versionCode currentVersion
-        versionName "${currentVersion}.0"
+        versionName "1.${currentVersion}"
     }
     buildTypes {
         release {
@@ -75,7 +75,7 @@ publishing {
             }
             groupId 'com.uncopt'
             artifactId 'android.justified'
-            version "${currentVersion}.0"
+            version "1.${currentVersion}"
             pom.packaging 'jar'
             artifact classesJar
             artifact javadocJar

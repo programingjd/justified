@@ -8,7 +8,7 @@ Usage
 
 Use an instance of the class ```JustifiedTextView``` for a TextView with justified text.
 
-Use an instance of the class ```ustifiedEditText``` for an EditText with justified text (the
+Use an instance of the class ```JustifiedEditText``` for an EditText with justified text (the
 text can be editable).
 
 Project Setup

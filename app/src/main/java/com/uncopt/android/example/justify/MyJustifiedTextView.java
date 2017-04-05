@@ -9,6 +9,8 @@ import android.text.style.ClickableSpan;
 import android.text.util.Linkify;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
+import android.view.View;
+import android.widget.Toast;
 
 import com.uncopt.android.widget.text.justify.JustifiedTextView;
 
@@ -21,6 +23,11 @@ public class MyJustifiedTextView extends JustifiedTextView {
       final ExampleActivity activity = (ExampleActivity)context;
       setTypeface(activity.getTypeface());
     }
+    setOnClickListener(new View.OnClickListener() {
+      @Override public void onClick(final @NotNull View v) {
+        Toast.makeText(context, "Click", Toast.LENGTH_SHORT).show();
+      }
+    });
   }
 
   @Override

@@ -1,15 +1,15 @@
 apply plugin: 'com.android.library'
 apply plugin: 'maven-publish'
 
-def currentVersion = 3
+def currentVersion = 4
 
 android {
-    compileSdkVersion 19
-    buildToolsVersion "20.0.0"
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
 
     defaultConfig {
         minSdkVersion 9
-        targetSdkVersion 19
+        targetSdkVersion 22
         versionCode currentVersion
         versionName "1.${currentVersion}"
     }
@@ -81,11 +81,11 @@ publishing {
             artifact javadocJar
             artifact sourcesJar
         }
-        repositories {
-            maven {
-                url "$buildDir/repo"
-            }
-        }
+//        repositories {
+//            maven {
+//                url "$buildDir/repo"
+//            }
+//        }
     }
 }
 
